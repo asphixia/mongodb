@@ -4,12 +4,14 @@ export interface IBook extends Document {
   title: string;
   author: string;
 }
-export interface IBook extends Document {
+
+export interface IBookReview extends Document {
     title: string;
     author: string;
     releaseDate: Date;
-    reviews: string[];
-    
+    rating: number;
+    comments: string;
+
 }
 
 const BookSchema: Schema = new Schema({
@@ -18,3 +20,4 @@ const BookSchema: Schema = new Schema({
 });
 
 export default mongoose.model<IBook>('Book', BookSchema);
+
