@@ -13,7 +13,7 @@ export interface IBookReview extends Document {
     comments: string;
 
 }
-
+//schema for the book model
 const BookSchema: Schema = new Schema({
   title: { type: String, required: true },
   author: { type: String, required: true }

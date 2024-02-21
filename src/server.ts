@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import resolvers from './resolvers/bookResolver';
 import typedefs from './typedefs/bookTypedefs';
 
-
+//starts and configures the server
 async function startServer() {
     const app = express();
 
