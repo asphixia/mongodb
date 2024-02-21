@@ -13,6 +13,9 @@ export interface IBookReview extends Document {
     comments: string;
 
 }
+export interface Testinterface extends Document {
+    title: string;
+}
 
 const BookSchema: Schema = new Schema({
   title: { type: String, required: true },

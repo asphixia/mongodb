@@ -1,5 +1,6 @@
 import BookModel from '../models/book';
 
+// resolvers for the book type
 const resolvers = {
   Query: {
     books: async () => await BookModel.find(),
