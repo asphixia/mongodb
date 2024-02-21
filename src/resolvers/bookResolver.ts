@@ -3,7 +3,11 @@ import BookModel from '../models/book';
 const resolvers = {
   Query: {
     books: async () => await BookModel.find(),
-    book: async (_, { id }: { id: string }) => await BookModel.findById(id)
+    book: async (_, { id }: { id: string }) => await BookModel.findById(id),
+    booksByTitle: async (_, { title }: { title: string }) => await BookModel.findOne({title}),
+    booksByAuthor: async (_, { author }: { author: string }) => await BookModel,
+    
+
   },
   Mutation: {
     addBook: async (_, { title, author }: { title: string, author: string }) => {
@@ -16,6 +20,7 @@ const resolvers = {
     deleteBook: async (_, { id }: { id: string }) => {
       return await BookModel.findByIdAndDelete(id);
     }
+
   }
 };
 

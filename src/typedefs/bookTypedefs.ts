@@ -10,12 +10,16 @@ const typeDefs = gql`
   type Query {
     books: [Book!]!
     book(id: ID!): Book
+    bookByTitle(title: String!): Book
+    bookByAuthor(author: String!): Book
+    
   }
 
   type Mutation {
     addBook(title: String!, author: String!): Book!
     updateBook(id: ID!, title: String!, author: String!): Book!
     deleteBook(id: ID!): Book
+
   }
 `;
 
